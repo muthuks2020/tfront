@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Active ads</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-multiselect.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-multiselect.css">
+	 <link href = "css/jquery-ui.css" rel = "stylesheet">
+	 <script src = "js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="css/style.css" rel="stylesheet">
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+<header class="bottom-border clearfix">
+<div class="container-fluid">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html" style="float:none;">
+		<div class="logo-header pull-left"></div>
+	</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+	   <ul class="nav navbar-nav navbar-right" id="User-dropdown">
+			<li class="visible-xs text-center margin-top">  <span class="glyphicon glyphicon-user"></span><span class="prof-name">Name</span></li>
+			<li class="align-top hidden-xs" ><span class="glyphicon glyphicon-user"></span><span class="prof-name">Name</span></li>
+				<div id="User-content">
+				<ul>
+					<li>View Profile</li>
+					<li>Settings</li>
+					<li>Billing</li>
+					<li>Log out</li>
+				</ul>
+				</div>
+		</ul>
+	   <ul class="nav navbar-nav navbar-left ">
+			<li class="active"><a href="index.html">Active Campaigns</a></li>
+			<li><a href="generatead.html">Generate Ad Tags</a></li>
+		</ul>
+    </div>
+  </div>
+</nav>
+</div>
+</header>
+<div class="clearfix"></div>
+<section>
+	<div class="container-fluid margin-top ">
+		<div class="row clearfix">
+			<div class="col-xs-7 col-md-9 col-lg-9 margin-top">
+				<input type="text" id="myInput" class="input-placeholder"  placeholder="Search with Product, Job no., Neon ID.."/>
+			</div>
+			<div class="col-xs-5 col-md-3 col-lg-3">
+				<a href="#" class="pull-right filter-btn" id="filter-btn"><span class="glyphicon glyphicon-filter"></span></a>
+					<form method="post">
+					<div class="filter-dropdown" id="filter-index-dropdown">
+						<div class="col-xs-6">
+							<div class="row">
+								<label class="label-txt">Date Type</label>
+							</div>
+						</div>					
+						<div class="col-xs-6">
+							<div class="row">
+								<select>
+									<option>Start</option>
+									<option>End</option>
+								</select>
+							</div>
+						</div>
+						<div class="clearfix"></div>									
+						<div class="col-xs-12">
+							<div class="row">
+							
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control" placeholder="From date" id="fromdate"/>
+									<i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+								</div>
+							
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control" placeholder="To date" id="todate"/>
+									<i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-12">
+							<div class="row">
+								<label class="label-txt label-txt3" id="product">Product<span class="glyphicon glyphicon-menu-down pull-right" style="font-size:1.2em;margin-top:6px;"></span></label>
+							</div>
+						</div>
+						
+						<div class="col-xs-12" id="productlist">
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="one">One
+								</label>
+							</div>
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="two">Two
+								</label>
+							</div>
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="three">Three
+								</label>
+							</div>
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="four">Four
+								</label>
+							</div>
+						</div>
+						
+						<div class="clearfix"></div>
+						
+						<div class="col-xs-12">
+							<div class="row">
+								<label class="label-txt label-txt3" id="status">Status<span class="glyphicon glyphicon-menu-down pull-right" style="font-size:1.2em;margin-top:6px;"></label>
+							</div>
+						</div>
+						
+						<div class="col-xs-12" id="statuslist">
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="one">One
+								</label>
+							</div>
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="two">Two
+								</label>
+							</div>
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="three">Three
+								</label>
+							</div>
+							<div>
+								<label class="checkbox-inline">
+									<input type="checkbox" value="four">Four
+								</label>
+							</div>
+						</div>
+						
+						<div class="clearfix"></div>
+						<button type="submit" class="btn btn-common" style="margin-top:10px">APPLY</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		 
+		 <div class="row">
+		 <div class="table-responsive col-xs-12 col-sm-12 col-md-12 col-lg-12">          
+  <table class="table ">
+    <thead class="table-header text ">
+      <tr>
+        <th class="table-header1 col-xs-2 col-md-2 col-lg-2 border-right" colspan="2">
+			
+		</th>
+        <th>Campaign</th>
+        <th>Product</th>
+        <th>Total impressions</th>
+        <th>CTR</th>
+		 <th></th>
+      </tr>
+    </thead>
+	
+	
+    <tbody class=" text ">
+	
+      <tr class="border-bottom1">
+		<td class="padding-top padding-bottom border-right" colspan="2">
+		<div class=" pull-left prod-details ">
+		<div class="display-inline dropdown dropbtn">
+		 <span class="glyphicon glyphicon-option-vertical"></span>
+		  <div class="dropdown-content" style="font-size:.6em;">
+		  <a href="#" data-toggle="modal" data-target="#editForm">Edit</a>
+		  <a href="#">Copy line item</a>
+		  <a href="#">Archive</a>
+		 </div>
+		</div>
+		<div class="display-inline text ">
+		 READY
+		</div>
+		<div class="display-inline text padding-left">
+		 AWS5288245 
+		</div>
+		</div>
+		<div class=" clearfix padding-top pull-right">
+		 <p class="status padding-top" title="status">status</p>
+		</div>
+	  </td>
+        <td class="padding-top padding-bottom" >LOREM IPSUM</td>
+        <td class="padding-top padding-bottom">LOREM IPSUM</td>
+        <td class="padding-top padding-bottom">LOREM IPSUM </td>
+		<td class="padding-top padding-bottom">LOREM IPSUM </td>
+        <td class="padding-top padding-bottom"><button onclick="window.location.href='details.html'" class="details pull-right">Details</button></td>
+      </tr>
+	  
+	  <tr>
+		<td class="padding-top padding-bottom border-right" colspan="2">
+			<div class="text1">START <span class="padding-left">02-FEB-2017 18:33</span></div>
+			<div class="text1">END <span class="padding-left">02-FEB-2017 18:33</span></div>
+		</td>
+		<td class="padding-top padding-bottom border-right" colspan="2">
+			<div class="text1">Job/Tracking No: <span class="padding-left">123456789</span></div>
+		</td>
+		<td class="padding-top padding-bottom" colspan="3">		
+		</td>
+
+       
+	  </tr>
+	  
+	  	
+    </tbody>
+	
+	
+  </table>
+  </div>
+</div>	
+		
+	</div>
+</section>
+
+		<!-- Edit Form -->
+
+		
+	<div id="editForm" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit Details</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="Campaign">CAMPAIGN</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="Product">PRODUCT</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+   <div class="form-group">
+    <label for="TOTAL IMPRESSIONS">TOTAL IMPRESSIONS</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+  <div class="form-group">
+    <label for="TOTAL IMPRESSIONS">CTR</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+ 
+</form>
+      </div>
+      <div class="modal-footer">
+	   <button type="submit" class="btn btn-common" data-dismiss="modal">Submit</button>
+        <button type="button" class="btn btn-common" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+	</div>
+	</div>
+	
+	
+</body>
+</html>
