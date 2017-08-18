@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Active ad - Details</title>
+	<title>Ad Details | Neon - Rich Media Solutions</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="js/jquery.min.js"></script>
@@ -56,34 +56,39 @@
 </header>
 <div class="clearfix"></div>
 <section>
-	<div class="container-fluid margin-top ">
-		
+	<div class="container-fluid ">
 		<div class="">
 			<div class="col-lg-12 border-bottom1">
-				<div class="row">
-				<div class=" col-xs-12 col-md-6 col-sm-6 col-lg-3 margin-bottom">
+			<div class="row">
+				<div class=" col-xs-12 col-md-6  col-lg-2 margin-top">
 					<h3 style="display:inline-block">Neon ID: </h3>
-					<h5 style="display:inline-block">AWS5288245</h5>
+					<h5 style="display:inline-block" id="neonID"></h5>
 				</div>
-				<div class="col-xs-12 col-md-6 col-lg-5 margin-bottom">
-					<h3 style="display:inline-block">Job No/Tracking No: </h3>
-					<input type="label-textBox" style="display:inline-block" value="123456789">
+				<div class="col-xs-12 col-md-6 col-lg-4">
+					<form method="post">
+						<h3 style="display:inline-block">Job No/Tracking No: <input class="label-textBox1 padding-left inline"type="text" disabled placeholder ="123456789" id="jobno"/> </h3>
+						<input type="hidden">
+					</form>					
 				</div>
+				
 				<div class="clearfix"></div>
 				</div>
 			</div>
-			<div class="inline pull-left  col-xs-12">
+			
+			<div class="inline pull-left col-xs-12 col-md-6 margin-top">
 				<div class="label-txt">
 					CAMPAIGN
 					<span id="editCampaign" class="edit pull-right"><span class="glyphicon glyphicon-pencil"></span></span>
 				</div>
-				<div><input class="label-textBox" type="text" id="campaign" value="loremipsum_campaign_name" /></div>
+				<div><input class="label-textBox" type="text" id="campaign" disabled value="loremipsum_campaign_name" /></div>
 			</div>
+			<div class="clearfix"></div>
+			
+			
 		</div>
-		<div class="clearfix"></div>
 			
 			<!--Static Banner-->
-		<div class=" col-xs-12 ">
+		<div class=" col-xs-12 margin-top">
 		
 			<ul class="nav nav-pills">
 				<li class="active"><a data-toggle="tab" href="#info">Info</a></li>
@@ -95,132 +100,124 @@
 			
 				<div class="tab-content">
 					<div id="info" class="tab-pane active col-xs-12">
-						<div class="inline col-xs-12 col-md-6">
-						
+						<div class="row">
+							
+					<div class="inline col-xs-12 col-md-6 margin-top pad">
+			<div class="label-txt margin-top">Product</div>
 							<div class="row">
-							<div class="label-txt">Product</div>
-							<div class="col-xs-8 col-md-4 margin-bottom">
-							<div class="row">
-								<div class="label-textBox">
-									<select id="productType" disabled>
-										<option value="expandables">Expandables</option>
-										<option value="slidingBillboard">Sliding Billboard</option>
-										<option value="footerPencil">Footer Pencil</option>
-										<option value="siteTakeover">Site Takeover</option>
-										<option value="interstitial">Interstitial</option>
-										<option value="pushdown">Pushdown</option>
-										<option value="billboard">Billboard</option>
-										<option value="filmstrip">Filmstrip</option>
-										<option value="gravityVideoSkin">Gravity/Video Skin</option>
-										<option value="interactiveTakeover">Interactive Takeover</option>
-										<option value="videoTakeover">Video Takeover</option>
-										<option value="heroFlip">Hero Flip</option>
-										<option value="degreeVideo">360 degree video</option>
-										<option value="carousel">Carousel</option>
-										<option value="wallpaperPageSkin">Wallpaper/Page Skin</option>
-										<option value="videoPreRolls">Video pre-rolls</option>
-										<option value="videoCompanionAds">Video Companion Ads</option>
-										<option value="inBannerVideo">In Banner Video</option>
-										<option value="phoneAppInterstitial">Phone App Interstitial</option>
-										<option value="tabletAppInterstitial">Tablet App Interstitial</option>
-										<option value="mobileSlider">Mobile Slider</option>
-									</select>
+							<div class="col-xs-12 col-md-6">
+							<div class="">
+							<div class="label-textBox">
+								<select id="productType" disabled>
+									<option value="expandables">Expandables</option>
+									<option value="slidingBillboard">Sliding Billboard</option>
+									<option value="footerPencil">Footer Pencil</option>
+									<option value="siteTakeover">Site Takeover</option>
+									<option value="interstitial">Interstitial</option>
+									<option value="pushdown">Pushdown</option>
+									<option value="billboard">Billboard</option>
+									<option value="filmstrip">Filmstrip</option>
+									<option value="gravityVideoSkin">Gravity/Video Skin</option>
+									<option value="interactiveTakeover">Interactive Takeover</option>
+									<option value="videoTakeover">Video Takeover</option>
+									<option value="heroFlip">Hero Flip</option>
+									<option value="degreeVideo">360 degree video</option>
+									<option value="carousel">Carousel</option>
+									<option value="wallpaperPageSkin">Wallpaper/Page Skin</option>
+									<option value="videoPreRolls">Video pre-rolls</option>
+									<option value="videoCompanionAds">Video Companion Ads</option>
+									<option value="inBannerVideo">In Banner Video</option>
+									<option value="phoneAppInterstitial">Phone App Interstitial</option>
+									<option value="tabletAppInterstitial">Tablet App Interstitial</option>
+									<option value="mobileSlider">Mobile Slider</option>
+								</select>
+								</div>
 								</div>
 							</div>
+							<div class="col-xs-12 col-md-6 ">	
+							</div>
 							</div>
 							
+							<span id="filesDisplay1"> 
+								<div class="label-txt margin-bottom">Files</div>
+								<div class="col-xs-2 col-md-1 margin-bottom">
+									<div class="row preview-container">
+										<img src="img/Hydrangeas.jpg" class="img-responsive img-thumbnail" onclick="previewPic(this.src)">
+									</div>
+								</div>
+								<div class="col-xs-10 col-md-5">
+									<input class="label-textBox imgtext" disabled type="text" value="demopic1.png"/>
+								</div>
+								<div class="col-xs-4 col-md-2 text-center">
+									<input class="label-textBox imgtext" disabled type="text" value="320x250"/>
+								</div>
+								<div class="col-xs-4 col-md-2 text-center">
+									<input class="label-textBox imgtext" disabled type="text" value="61Kb"/>
+								</div>
+								<div class="col-xs-4 col-md-2 ">							
+												<div>
+												<input class="label-textBox imgtext" type="file" id="browse" name="fileupload" style="display:none" onChange="Handlechange();"/>
+												<span class="changeFile glyphicon glyphicon-paperclip inline " id="fakeBrowse" onclick="HandleBrowseClick();"></span>
+												</div>
+								</div>
+								
+							<div class="clearfix"></div>
+								<div class="col-xs-2 col-md-1 margin-bottom">
+									<div class="row preview-container">
+										<img src="img/Chrysanthemum.jpg" class="img-responsive img-thumbnail" onclick="previewPic(this.src)">
+									</div>
+								</div>
+								<div class="col-xs-10 col-md-5">
+									<input class="label-textBox imgtext" disabled type="text" value="demopic1.png"/>
+								</div>
+								<div class="col-xs-4 col-md-2 text-center">
+									<input class="label-textBox imgtext" disabled type="text" value="320x250"/>
+								</div>
+								<div class="col-xs-4 col-md-2 text-center">
+									<input class="label-textBox imgtext" disabled type="text" value="61Kb"/>
+								</div>
+								<div class="col-xs-4 col-md-2 ">							
+												<div>
+												<input class="label-textBox imgtext" type="file" id="browse" name="fileupload" style="display:none" onChange="Handlechange();"/>
+												<span class="changeFile glyphicon glyphicon-paperclip inline " id="fakeBrowse" onclick="HandleBrowseClick();"></span>
+												</div>
+								</div>
+								
+							<div class="clearfix"></div>
+								<div class="col-xs-2 col-md-1 margin-bottom">
+									<div class="row preview-container">
+										<img src="img/Tulips.jpg" class="img-responsive img-thumbnail" onclick="previewPic(this.src)">
+									</div>
+								</div>
+								<div class="col-xs-10 col-md-5">
+									<input class="label-textBox imgtext" disabled type="text" value="demopic1.png"/>
+								</div>
+								<div class="col-xs-4 col-md-2 text-center">
+									<input class="label-textBox imgtext" disabled type="text" value="320x250"/>
+								</div>
+								<div class="col-xs-4 col-md-2 text-center">
+									<input class="label-textBox imgtext" disabled type="text" value="61Kb"/>
+								</div>
+								<div class="col-xs-4 col-md-2 ">							
+												<div>
+												<input class="label-textBox imgtext" type="file" id="browse" name="fileupload" style="display:none" onChange="Handlechange();"/>
+												<span class="changeFile glyphicon glyphicon-paperclip inline " id="fakeBrowse" onclick="HandleBrowseClick();"></span>
+												</div>
+								</div>
+								
+							</span>	
 							
-							<div class="label-txt">Ad Asset</div>
-							<div>
-								<input id="adAsset" class="label-textBox" type="text" disabled  placeholder="Enter asset URL here"/>
-							</div>
-							<div class="label-txt">Files</div>
-							<div class="col-xs-2 col-md-1">
-								<div class="row preview-container"><img src="img/Hydrangeas.jpg" class="img-responsive img-thumbnail"></div>
-							</div>
-							<div class="col-xs-10 col-md-3">
-								<input class="label-textBox imgtext" type="text" disabled value="video.mp4"/>
-							</div>
-							<div class="col-xs-6 col-md-2 text-center">
-								<input class="label-textBox imgtext" type="text" disabled value="320x250"/>
-							</div>
-							<div class="col-xs-6 col-md-2 text-center">
-								<input class="label-textBox imgtext" type="text" disabled value="6MB"/>
-							</div>
 							
-							<div id="changeFile" class="col-xs-12 col-md-4 text-center" style="display:none">
-								<input class="label-textBox imgtext" type="file" id="browse" name="fileupload" style="display:none" onChange="Handlechange();"/>
-								<input class="label-textBox imgtext" type="text" id="filename" readonly="true" style="display:none"/>
-								<input class="label-textBox imgtext" type="button" value="Change file" id="fakeBrowse" onclick="HandleBrowseClick();"/>
-							</div>	
 							
 							<div class="clearfix"></div>
 							
-							
-							<div class="inline pull-left col-xs-12">
-								<div class="row">
-									<div class="label-txt" id="impTrackURL">Impression Tracking URL</div>
-								</div>
-							</div>
-							<div class="col-xs-12" id="imp-url-container">	
-								<div class="col-xs-12" id="imp-url-unit0">
-									<div class="row">							
-										<div class="inline col-xs-3">
-											<div class="row">
-												<div class="label-txt label-txt2">Event</div>
-													<div class="label-textBox">
-													<select disabled id="eventSelect">
-														<option value="impression">Impression</option>
-														<option value="start">Start</option>
-														<option value="play">Play</option>
-														<option value="pause">Pause</option>
-														<option value="mute">Mute</option>
-														<option value="muteOff">Mute Off</option>
-														<option value="expand">Expand</option>
-														<option value="contract">Contract</option>
-														<option value="replays">Replays</option>
-														<option value="close">Close</option>
-														<option value="skips">Skips</option>
-														<option value="played25">Played 25%</option>
-														<option value="played50">Played 50%</option>
-														<option value="played75">Played 75%</option>
-														<option value="played100">Played 100%</option>
-													</select>
-													</div>
-											</div>
-										</div>
-										<div class="inline col-xs-8">
-												<div class="label-txt label-txt2">URL</div>
-												<div><input disabled class="label-textBox" type="text" placeholder="Enter tracking URL here"/></div>
-										</div>
-										<div class="inline col-xs-1">	
-											<div class="label-txt">&nbsp;</div>									
-											<a href="#" class="btn btn-lg" id="add-url-btn">
-											  <span class="glyphicon glyphicon-plus"></span>
-											</a>
-										</div>
-									</div>	
-								</div>
-							</div>	
-							
-							
-							<div class="clearfix"></div>
-							
-							
-							<div class="inline pull-left col-xs-12 clearfix">
-								<div class="row">
-								<div class="label-txt">Click-through URL</div>
-								<div><input id="CTRURL" class="label-textBox" type="text" disabled placeholder="Enter Click-through URL here"/></div>
-								</div>
-							</div>
-							
-							<div class="row" id="rmChoice">
+							<div class="row margin-top" id="rmChoice">
 								<div class="inline pull-left  col-xs-6 col-md-4">
 									<div class="label-txt">Ad Server of choice</div>
 									<div> 
-										<select class="label-textBox full-width"  id="multicheckboxes" disabled multiple="multiple" >
-											<option selected value="basic">BASIC</option>
-											<option selected value="VPAID">VPAID</option>
+										<select class="label-textBox full-width" disabled id="multicheckboxes" multiple="multiple" >
+											<option value="basic">Basic</option>
+											<option value="VPAID">VPAID</option>
 											<option value="dfp">DFP</option>
 											<option value="java">SDK</option>
 										</select>
@@ -231,7 +228,7 @@
 								 <div class="label-textBox">
 									<select id="iFramebuster" disabled name="iFramebuster" >
 										<option value="Default">Default</option>
-										<option selected value="Yes">Yes</option>
+										<option selected value="yes">Yes</option>
 										<option value="no">No</option>
 									</select>
 								</div>
@@ -239,7 +236,7 @@
 							<div class="inline pull-left  col-xs-6 col-md-4 clearfix">
 								<div class="label-txt display-none">Ad Server of choice</div>
 								<div class="checkbox checkbox-inline label-txt">
-									<input id="useHTTPS" type="checkbox" disabled value="Use HTTPs" checked="" >
+									<input disabled id="useHTTPS" type="checkbox" value="Use HTTPs " checked="" >
 									<label for="https">Use HTTPs</label>
 									</div>
 							</div>
@@ -255,9 +252,9 @@
 										<div class="inline pull-left col-xs-5 col-md-5">
 											<div class="label-txt">Aspect Ratio</div>
 											<div> 
-												<select class="label-textBox full-width" id="aspectRatio" disabled multiple="multiple" >
+												<select class="label-textBox full-width" disabled id="aspectRatio" multiple="multiple" >
 													<option value="sixteen9">16:9</option>
-													<option selected value="four3">4:3</option>
+													<option value="four3">4:3</option>
 												</select>
 											</div>
 										</div>
@@ -265,7 +262,7 @@
 										<div class="inline pull-left col-xs-7 col-md-7">
 											<div class="label-txt">Resolution</div>
 											<div> 
-												<select class="label-textBox full-width" id="resolution" multiple="multiple" >
+												<select class="label-textBox full-width" disabled id="resolution" multiple="multiple" >
 													<optgroup label="16:9" id="six9">
 														<option value="1">1920 x 1080 (HD)</option>
 														<option value="2">1280 x 720 (HD)</option>
@@ -275,7 +272,7 @@
 														<option value="6">480 x 270</option>
 														<option value="7">426 x 240</option>
 													</optgroup>
-													<optgroup label="4:3" id="four3">									
+													<optgroup label="4:3" id="four3">
 														<option value="9">1920 x 1440</option>
 														<option value="10">1280 x 960</option>
 														<option value="11">640 x 480 (SD)</option>
@@ -287,7 +284,6 @@
 										</div>
 									</div>
 								</div>
-								
 							
 							
 							<div class="clearfix"></div>
@@ -296,10 +292,10 @@
 										<div class="inline pull-left col-xs-6 col-md-4">
 											<div class="label-txt">Bitrates</div>
 											<div> 
-												<select class="label-textBox full-width" id="bitrates" disabled multiple="multiple" >
+												<select class="label-textBox full-width" disabled id="bitrates" multiple="multiple" >
 													<option value="1">Very Low</option>
-													<option value="2">Low/option>
-													<option selected value="3">Medium</option>
+													<option value="2">Low</option>
+													<option value="3">Medium</option>
 													<option value="4">High</option>
 													<option value="5">Very High</option>
 												</select>
@@ -309,8 +305,8 @@
 										<div class="inline pull-left col-xs-6 col-md-4">
 											<div class="label-txt">VAST Version</div>
 											<div> 
-												<select class="label-textBox full-width" id="vastVersion" disabled >
-													<option selected value="1">3.0 and below</option>
+												<select class="label-textBox full-width" id="vastVersion" disabled>
+													<option value="1">3.0 and below</option>
 													<option value="2">2.0 and below</option>
 												</select>
 											</div>
@@ -319,8 +315,8 @@
 										<div class="inline pull-left col-xs-6 col-md-4">
 											<div class="label-txt">Scalability</div>
 											<div> 
-												<select class="label-textBox full-width" id="scalability" disabled >
-													<option selected value="1">Yes</option>
+												<select class="label-textBox full-width" id="scalability" disabled>
+													<option value="1">Yes</option>
 													<option value="2">No</option>
 												</select>
 											</div>
@@ -329,8 +325,6 @@
 								</div>
 								
 							</div>			
-							
-							
 							
 							
 							
@@ -346,19 +340,71 @@
 								<div class="col-xs-12">
 									<div id="adtag-box">
 										<textarea id="gentdAdtag"></textarea>
+										<button class="btn btn-common" onclick="copyToClipboard('gentdAdtag')"><span class="glyphicon glyphicon-copy"></span> Copy</button>
 										<button onclick="window.location.href='index.html'" class="btn btn-common"><span class="glyphicon glyphicon-remove"></span> Close</button>
 									</div>
 								</div>
 							</div>
 							
 							</div>
-						</div>
 						
-						<div class="inline col-xs-12 col-md-5" >
-							<div class="label-txt">Preview</div>
+						
+						
+						<div class="inline col-xs-12 col-md-6 margin-top" >
+							<div class="label-txt margin-bottom">Preview</div>
 							<div class="preview">
-								<img src="img/unnamed.jpg" class="img-responsive">
+								<img id="fullviewpic" src="img/preview.jpg">
+								<iframe id="adpreview" src=""></iframe>
 							</div>
+							<div class="clearfix"></div>
+							<div class="col-xs-12" id="imp-url-container">
+								<div class="" id="imp-url-unit0">
+									<div class="row">							
+										<div class="inline col-xs-3">
+											<div class="row">
+												
+												<div class="label-textBox">
+													<select id="eventSelect" disabled>
+														<option value="impression">Impression Tracker</option>
+														<option value="start">Start</option>
+														<option value="play">Play</option>
+														<option value="pause">Pause</option>
+														<option value="mute">Mute</option>
+														<option value="muteOff">Mute Off</option>
+														<option value="expand">Expand</option>
+														<option value="contract">Contract</option>
+														<option value="replays">Replays</option>
+														<option value="close">Close</option>
+														<option value="skips">Skips</option>
+														<option value="played25">Played 25%</option>
+														<option value="played50">Played 50%</option>
+														<option value="played75">Played 75%</option>
+														<option value="played100">Played 100%</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-9">
+										<input class="label-textBox2" disabled type="text" placeholder="Enter tracking URL here"/><a href="#" class="magin-left pull-right" id="add-url-btn">
+										<span class="glyphicon glyphicon-plus "></span></a></div>
+										<div class="clearfix"></div>
+									</div>	
+								</div>
+							</div>	
+							
+							
+							<div class="clearfix"></div>
+							
+							
+							<div class="inline pull-left col-xs-12 clearfix">
+								<div class="row">
+								
+								<div><input id="CTRURL" disabled class="label-textBox" type="text"  placeholder="Enter Click-through URL here"/></div>
+								</div>
+							</div>
+							
+						</div>	
+						
 						</div>
 					</div>
 				
@@ -519,7 +565,7 @@
 										
 										
 					
-					<div id="log" class="tab-pane fade border-left"></div>
+					<div id="log" class="tab-pane fade"></div>
 				</div>
 					
 				<div class="clearfix"></div>
@@ -535,18 +581,8 @@
 </footer>
 
 <script>
-		function HandleBrowseClick()			{
-				var fileinput = document.getElementById("browse");
-				fileinput.click();
-			}
-
-			function Handlechange()
-			{
-				var fileinput = document.getElementById("browse");
-				var textinput = document.getElementById("filename");
-				textinput.value = fileinput.value;
-			}
-			$('#add-url-btn').css("display","none");
+			$('#add-url-btn').css("display","none");			
+			$("#filesDisplay1").show();
 </script>
 
 </body>

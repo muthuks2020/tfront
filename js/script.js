@@ -32,10 +32,10 @@ $(document).ready(function(){
 				var tag = $("#adtag-box");
 				var txt = $("#gentdAdtag");
 				txt.val("\<script\>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\<\\script\>");
-				txt.select();
-				tag.slideDown('slow');
-				$("#neonID").text("AWS5288245");
-			})							
+				tag.slideDown();
+				setTimeout(function(){txt.select();}, 500);
+				$("#jobno").val("1234567");
+			})				
 			
 			var clonenum=0;
 			$("#add-url-btn").click(function(){
@@ -86,31 +86,34 @@ $(document).ready(function(){
 			
 			$("#browse").on("change",function(){
 				if($("#browse").val() !=''){
-					$("#filesDisplay").show();
+					$("#filesDisplay").show();					
+					$("#fullviewpic").hide();				
+					$("#adpreview").show();						
+					$("#adpreview").attr("src",document.getElementById("browse").files[0].name);
 					}
 			})
 		
 			/*details page*/
 
 			$("#editCampaign").on("click",enableEditing);
-			function enableEditing(){				
-				$('#add-url-btn').css("display","block");
-				$("ul.nav-tabs li").removeClass("active");
-				$("ul.nav-tabs a[href='#info'").parent().addClass("active");
-				$("#info").addClass("active");
-				$("#adAsset").removeAttr("disabled");
-				$("#changeFile").css("display","block");
-				$("#CTRURL").removeAttr("disabled");
-				$("#imp-url-unit0 input, #imp-url-unit0 select").removeAttr("disabled");
-				$("#add-url-btn").css("display","block");
-				$("#multicheckboxes").multiselect("enable");
-				$("#iFramebuster").removeAttr("disabled");
-				$("#useHTTPS").removeAttr("disabled");
+			function enableEditing(){			
+				$("ul.nav-pills a").parent().removeClass("active");	
+				$("ul.nav-pills a[href='#info'").parent().addClass("active");//
+				$("#info").addClass("active");//
+				$("#log").removeClass("active");//
+				$("#metrics").removeClass("active");//
+				$(".changeFile").css("display","inline-block");//
+				$("#CTRURL").removeAttr("disabled");//
+				$("#imp-url-unit0 input, #imp-url-unit0 select").removeAttr("disabled");//
+				$("#add-url-btn").css("display","block");//
+				$("#multicheckboxes").multiselect("enable");//
+				$("#iFramebuster").removeAttr("disabled");//
+				$("#useHTTPS").removeAttr("disabled");//
 				$('#aspectRatio').multiselect("enable");
-				$('#resolution').multiselect("enable");
-				$('#bitrates').multiselect("enable");
-				$('#vastVersion').removeAttr("disabled");
-				$('#scalability').removeAttr("disabled");
+				$('#resolution').multiselect("enable");//
+				$('#bitrates').multiselect("enable");//
+				$('#vastVersion').removeAttr("disabled");//
+				$('#scalability').removeAttr("disabled");//
 			}
 			
 			
@@ -151,5 +154,51 @@ $(document).ready(function(){
 					$('#resolution').multiselect('refresh');
 				}
 			})
+	
+			
+	
+		});
+
 		
-});
+		
+		function previewPic(src){					
+			$("#fullviewpic").show();
+			$("#adpreview").hide();
+			$("#fullviewpic").attr("src",src);
+		}
+			
+		//for showing the full ad preview if clicked else where
+		$(window).click(function(e){
+			if(!e.target.id && $("#browse").val() !='' && !($(event.target).hasClass('img-thumbnail'))){
+				$("#fullviewpic").hide();
+				$("#adpreview").show();
+				$("#adpreview").attr("src",document.getElementById("browse").files[0].name);
+			}
+		});
+
+	
+	
+		//For showing icon instead of default file input element
+		function HandleBrowseClick()			{
+				var fileinput = document.getElementById("browse");
+				fileinput.click();
+			}
+		function Handlechange()
+		{
+			var fileinput = document.getElementById("browse");
+			//setting iframe of ad preview with input file
+			$("#adpreview").attr("src",document.getElementById("browse").files[0].name);
+		}
+		
+		
+		//to copy the adtag to the clipboard
+		function copyToClipboard(elementId) {
+		  var aux = document.createElement("input");
+		  aux.setAttribute("value", $('#'+elementId).val());
+		  document.body.appendChild(aux);
+		  aux.select();
+		  document.execCommand("copy");
+		  document.body.removeChild(aux);
+		}
+		
+		
